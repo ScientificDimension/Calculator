@@ -1,0 +1,31 @@
+PODS:
+  - CalculatorKeyboard (1.0.0)
+  - SwiftyStateMachine (1.0.0)
+
+DEPENDENCIES:
+  - CalculatorKeyboard (from `https://github.com/ScientificDimension/CalculatorKeyboard`, branch `develop`)
+  - SwiftyStateMachine (from `https://github.com/ScientificDimension/SwiftyStateMachine`, branch `develop`)
+
+EXTERNAL SOURCES:
+  CalculatorKeyboard:
+    :branch: develop
+    :git: https://github.com/ScientificDimension/CalculatorKeyboard
+  SwiftyStateMachine:
+    :branch: develop
+    :git: https://github.com/ScientificDimension/SwiftyStateMachine
+
+CHECKOUT OPTIONS:
+  CalculatorKeyboard:
+    :commit: 3151cd6440b64fe521561269f9a32fbc60b7546f
+    :git: https://github.com/ScientificDimension/CalculatorKeyboard
+  SwiftyStateMachine:
+    :commit: 7b2102b9bd71f521824ee89225113438e899f824
+    :git: https://github.com/ScientificDimension/SwiftyStateMachine
+
+SPEC CHECKSUMS:
+  CalculatorKeyboard: 7247eda351a5d02db3822ccb6f65b16088c43f73
+  SwiftyStateMachine: 342eb45cce0d284a36bdad886360bd142180686b
+
+PODFILE CHECKSUM: e5655bd7a731e6418cdfc0659d8f83d4e0816c8d
+
+COCOAPODS: 1.5.3
