@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CalculationContainerView: CalculatorContainerView {
+class CalculationContainerView: CellContainerView {
     
     // MARK: - Memory Management
     
@@ -22,7 +22,7 @@ class CalculationContainerView: CalculatorContainerView {
     
     // MARK: - IConfigurable
 
-    override func configure (_ calculation: Calculation) {
+    func configure (_ calculation: Calculation) {
         if !Config.highlightElementBorder {
             labelOne.layer.borderWidth = 0
             labelOpr.layer.borderWidth = 0
@@ -36,18 +36,6 @@ class CalculationContainerView: CalculatorContainerView {
         labelEql.text = calculation.result.eqlText
         labelRes.text = calculation.result.resText
     }
-    
-    override func configure(_ calculatorState: CalculatorState) {}
-
-    // MARK: - IAnimatable
-    
-    override func setAnimations(timeOffset: CFTimeInterval) {
-        var timeOffset = timeOffset
-        timeOffset += beginTime
-    }
-    
-    override func removeAnimations() {}
-    override func addAnimations() {}
 }
 
 

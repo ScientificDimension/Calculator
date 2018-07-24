@@ -72,13 +72,13 @@
 		924392022104B73F001046D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924391FC2104B73F001046D9 /* LaunchScreen.storyboard */; };
 		924392032104B73F001046D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924391FE2104B73F001046D9 /* Main.storyboard */; };
 		924392042104B73F001046D9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 924392002104B73F001046D9 /* Info.plist */; };
-		924392112104B7E2001046D9 /* CalculatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924392072104B7E1001046D9 /* CalculatorCell.swift */; };
-		924392122104B7E2001046D9 /* CalculatorContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924392082104B7E1001046D9 /* CalculatorContainerView.swift */; };
+		924392122104B7E2001046D9 /* CellContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924392082104B7E1001046D9 /* CellContainerView.swift */; };
 		924392132104B7E2001046D9 /* EnteringContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243920A2104B7E1001046D9 /* EnteringContainerView.swift */; };
 		924392142104B7E2001046D9 /* EnteringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243920B2104B7E1001046D9 /* EnteringCell.swift */; };
 		924392152104B7E2001046D9 /* InitialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243920D2104B7E1001046D9 /* InitialCell.swift */; };
 		924392162104B7E2001046D9 /* CalculationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243920F2104B7E1001046D9 /* CalculationCell.swift */; };
 		924392172104B7E2001046D9 /* CalculationContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924392102104B7E1001046D9 /* CalculationContainerView.swift */; };
+		9243921B21071C81001046D9 /* ICalculatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243921A21071C81001046D9 /* ICalculatorCell.swift */; };
 		92F100BD21026C9D00F73C4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F100BC21026C9D00F73C4F /* ViewController.swift */; };
 		92F101602103177700F73C4F /* ColorSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F100CE2103177700F73C4F /* ColorSchema.swift */; };
 		92F101612103177700F73C4F /* IColorSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F100CF2103177700F73C4F /* IColorSchema.swift */; };
@@ -158,13 +158,13 @@
 		924391FD2104B73F001046D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		924391FF2104B73F001046D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		924392002104B73F001046D9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		924392072104B7E1001046D9 /* CalculatorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorCell.swift; sourceTree = "<group>"; };
-		924392082104B7E1001046D9 /* CalculatorContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorContainerView.swift; sourceTree = "<group>"; };
+		924392082104B7E1001046D9 /* CellContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellContainerView.swift; sourceTree = "<group>"; };
 		9243920A2104B7E1001046D9 /* EnteringContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnteringContainerView.swift; sourceTree = "<group>"; };
 		9243920B2104B7E1001046D9 /* EnteringCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnteringCell.swift; sourceTree = "<group>"; };
 		9243920D2104B7E1001046D9 /* InitialCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialCell.swift; sourceTree = "<group>"; };
 		9243920F2104B7E1001046D9 /* CalculationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculationCell.swift; sourceTree = "<group>"; };
 		924392102104B7E1001046D9 /* CalculationContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculationContainerView.swift; sourceTree = "<group>"; };
+		9243921A21071C81001046D9 /* ICalculatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICalculatorCell.swift; sourceTree = "<group>"; };
 		92F100B721026C9C00F73C4F /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92F100BC21026C9D00F73C4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		92F100CE2103177700F73C4F /* ColorSchema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSchema.swift; sourceTree = "<group>"; };
@@ -212,6 +212,7 @@
 			children = (
 				924391402103CE15001046D9 /* IConfigurable.swift */,
 				924391412103CE15001046D9 /* IAnimatable.swift */,
+				9243921A21071C81001046D9 /* ICalculatorCell.swift */,
 			);
 			path = cellAbilities;
 			sourceTree = "<group>";
@@ -519,7 +520,7 @@
 		924392052104B7E1001046D9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				924392062104B7E1001046D9 /* calculatorCell */,
+				924392062104B7E1001046D9 /* cellContainerView */,
 				924392092104B7E1001046D9 /* enteringCell */,
 				9243920C2104B7E1001046D9 /* initialCell */,
 				9243920E2104B7E1001046D9 /* сalculationCell */,
@@ -527,13 +528,12 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		924392062104B7E1001046D9 /* calculatorCell */ = {
+		924392062104B7E1001046D9 /* cellContainerView */ = {
 			isa = PBXGroup;
 			children = (
-				924392072104B7E1001046D9 /* CalculatorCell.swift */,
-				924392082104B7E1001046D9 /* CalculatorContainerView.swift */,
+				924392082104B7E1001046D9 /* CellContainerView.swift */,
 			);
-			path = calculatorCell;
+			path = cellContainerView;
 			sourceTree = "<group>";
 		};
 		924392092104B7E1001046D9 /* enteringCell */ = {
@@ -780,6 +780,7 @@
 				92F100BD21026C9D00F73C4F /* ViewController.swift in Sources */,
 				92F101602103177700F73C4F /* ColorSchema.swift in Sources */,
 				924391952104A9D7001046D9 /* Dimensions.swift in Sources */,
+				9243921B21071C81001046D9 /* ICalculatorCell.swift in Sources */,
 				924391E12104AB41001046D9 /* IPaginatorManager.swift in Sources */,
 				924391692104A2BC001046D9 /* IOperandText.swift in Sources */,
 				924391EB2104AB41001046D9 /* IContentOffesManager.swift in Sources */,
@@ -821,8 +822,7 @@
 				924391862104A9AA001046D9 /* IComponentFactory.swift in Sources */,
 				924391EE2104AB41001046D9 /* CenteringPaginator.swift in Sources */,
 				924391772104A98C001046D9 /* CalculatorState.swift in Sources */,
-				924392112104B7E2001046D9 /* CalculatorCell.swift in Sources */,
-				924392122104B7E2001046D9 /* CalculatorContainerView.swift in Sources */,
+				924392122104B7E2001046D9 /* CellContainerView.swift in Sources */,
 				924391432103CE15001046D9 /* IAnimatable.swift in Sources */,
 				924392132104B7E2001046D9 /* EnteringContainerView.swift in Sources */,
 				924391F32104AB41001046D9 /* CGFloat+Normalize.swift in Sources */,

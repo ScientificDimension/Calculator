@@ -10,6 +10,6 @@ import UIKit
 
 protocol IEnteringCellConfigurator {
     func isEnteringCell(index: Int) -> Bool
-    func set(enteringCell: CalculatorCell)
+    func set(enteringCell: ICalculatorCell)
     func tryConfigureEnteringCell(transitionDirectionIsForward: Bool)
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CalculationCell: CalculatorCell {
+class CalculationCell: UICollectionViewCell, ICalculatorCell {
     
     // MARK: -
     
@@ -17,19 +17,13 @@ class CalculationCell: CalculatorCell {
 
     // MARK: - Containers
     
-    private lazy var containers: [CalculatorContainerView] = {
-        var rollingDominoContainer: CalculatorContainerView = {
-            let view = CalculationContainerView(frame: dimensions.frameInner)
-            view.layer.shouldRasterize = true
-            view.layer.rasterizationScale = UIScreen.main.scale
-            contentView.addSubview(view)
-            
-            return view
-        }()
+    private lazy var container: CalculationContainerView = {
+        let view = CalculationContainerView(frame: dimensions.frameInner)
+        view.layer.shouldRasterize = true
+        view.layer.rasterizationScale = UIScreen.main.scale
+        contentView.addSubview(view)
         
-        return [
-            rollingDominoContainer
-        ]
+        return view
     }()
 
     // MARK - Memory Management
@@ -46,7 +40,7 @@ class CalculationCell: CalculatorCell {
     // MARK: - Initial Configurations
 
     private func configure() {
-        backgroundColor = containers.first?.colorSchema.black
+        backgroundColor = container.colorSchema.black
         if Config.highlightElementBorder {
             layer.borderColor = UIColor.blue.cgColor
             layer.borderWidth = 1
@@ -55,24 +49,24 @@ class CalculationCell: CalculatorCell {
     
     // MARK: - IConfigurable
     
-    override func configure(_ calculation: Calculation) {
-        containers.forEach { $0.configure(calculation)}
+    func configure(_ calculation: Calculation) {
+        container.configure(calculation)
     }
     
-    override func configure(_ calculatorState: CalculatorState) {}
+    func configure(_ calculatorState: CalculatorState) {}
     
     // MARK: - IAnimatable
     
-    override func addAnimations() {
-        containers.forEach{ $0.addAnimations() }
+    func addAnimations() {
+        container.addAnimations()
     }
     
-    override func setAnimations(timeOffset: CFTimeInterval) {
-        containers.forEach{ $0.setAnimations(timeOffset: timeOffset) }
+    func setAnimations(timeOffset: CFTimeInterval) {
+        container.setAnimations(timeOffset: timeOffset)
     }
     
-    override func removeAnimations() {
-        containers.forEach{ $0.removeAnimations() }
+    func removeAnimations() {
+        container.removeAnimations()
     }
     
     // MARK: - life cycle
@@ -86,12 +80,12 @@ class CalculationCell: CalculatorCell {
             cellFrame: attributes.frame,
             scrollViewContentOffset: attributes.scrollViewContentOffset)
         
-        containers.forEach { $0.alpha = alpha }
+        container.alpha = alpha
         
         let timeOffset = animationDriver.cellAnimationTimeOffset(
             cellFrame: attributes.frame,
             scrollViewContentOffset: attributes.scrollViewContentOffset)
         
-        containers.forEach{ $0.setAnimations(timeOffset: timeOffset) }
+        container.setAnimations(timeOffset: timeOffset)
     }
 }

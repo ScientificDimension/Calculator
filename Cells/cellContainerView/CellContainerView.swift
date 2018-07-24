@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CalculatorContainerView: UIView, IAnimatable, IConfigurable {
+class CellContainerView: UIView, IAnimatable, IConfigurable {
     
     // MARK: -
     
@@ -52,29 +52,5 @@ class CalculatorContainerView: UIView, IAnimatable, IConfigurable {
         labelOpr.backgroundColor = colorSchema.black
         labelRes.backgroundColor = colorSchema.black
         labelTwo.backgroundColor = colorSchema.black
-    }
-    
-    // MARK: - IAnimatable
-    
-    func addAnimations() {
-        fatalError("Should be overriden in subclass ")
-    }
-    
-    func setAnimations(timeOffset: CFTimeInterval) {
-        fatalError("Should be overriden in subclass ")
-    }
-    
-    func removeAnimations() {
-        fatalError("Should be overriden in subclass ")
-    }
-
-    // MARK: - IConfigurable
-    
-    func configure(_ calculation: Calculation) {
-        fatalError("Should be overriden in subclass ")
-    }
-    
-    func configure(_ calculatorState: CalculatorState) {
-        fatalError("Should be overriden in subclass ")
     }
 }

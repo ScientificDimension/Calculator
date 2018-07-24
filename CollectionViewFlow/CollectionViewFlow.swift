@@ -45,18 +45,21 @@ class CollectionViewFlow: NSObject, UICollectionViewDataSource, UICollectionView
         }
         let calculation = calculationsFeeder[indexPath.row - 1]! 
         guard !enteringCellConfigurator.isEnteringCell(index: indexPath.row) else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(EnteringCell.self)", for: indexPath) as! CalculatorCell
-            cell.configure(calculation)
-            enteringCellConfigurator.set(enteringCell: cell)
-            enteringCellConfigurator.tryConfigureEnteringCell(transitionDirectionIsForward: false)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(EnteringCell.self)", for: indexPath)
+            if let cell = cell as? ICalculatorCell {
+                cell.configure(calculation)
+                enteringCellConfigurator.set(enteringCell: cell)
+                enteringCellConfigurator.tryConfigureEnteringCell(transitionDirectionIsForward: false)
+            }
 
             return cell
         }
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: calculation.operation.type.cellId, for: indexPath) as! CalculatorCell
-        cell.configure(calculation)
-        cell.removeAnimations() //TOOD: add protocol extension refreshAnimations()
-        cell.addAnimations()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: calculation.operation.type.cellId, for: indexPath)
+        if let cell = cell as? ICalculatorCell {
+            cell.configure(calculation)
+            cell.removeAnimations() //TOOD: add protocol extension refreshAnimations()
+            cell.addAnimations()
+        }
         
         return cell
     }

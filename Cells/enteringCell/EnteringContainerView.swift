@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EnteringContainerView: CalculatorContainerView {
+class EnteringContainerView: CellContainerView {
     
     // MARK: - Memory Management
     
@@ -35,13 +35,13 @@ class EnteringContainerView: CalculatorContainerView {
 
     // MARK: - IConfigurable
     
-    override func configure (_ calculation: Calculation) {
+    func configure (_ calculation: Calculation) {
         labelOne.text = calculation.firstOperand.text
         labelOpr.text = calculation.operation.text
         labelTwo.text = calculation.secondOperand.text
     }
     
-    override func configure(_ calculatorState: CalculatorState) {
+    func configure(_ calculatorState: CalculatorState) {
         switch calculatorState {
         case .enteringFirstOperand:
             labelOne.layer.borderColor = colorSchema.orange.cgColor
@@ -61,10 +61,4 @@ class EnteringContainerView: CalculatorContainerView {
             labelTwo.layer.borderColor = colorSchema.black.cgColor
         }
     }
-    
-    // MARK: - IAnimatable
-    
-    override func setAnimations(timeOffset: CFTimeInterval) {}
-    override func removeAnimations() {}
-    override func addAnimations() {}
 }

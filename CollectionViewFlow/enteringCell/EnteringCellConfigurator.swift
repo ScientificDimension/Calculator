@@ -18,7 +18,7 @@ class EnteringCellConfigurator: IEnteringCellConfigurator {
     
     // MARK: - Enering Cell
     
-    private(set) weak var enteringCell: CalculatorCell? = nil
+    private(set) weak var enteringCell: ICalculatorCell? = nil
     
     // MARK: -
     
@@ -39,7 +39,7 @@ class EnteringCellConfigurator: IEnteringCellConfigurator {
         return isEnteringCell(index)
     }
     
-    func set(enteringCell: CalculatorCell) {
+    func set(enteringCell: ICalculatorCell) {
         self.enteringCell = enteringCell
     }
     

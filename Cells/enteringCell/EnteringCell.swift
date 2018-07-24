@@ -8,12 +8,12 @@
 
 import UIKit
 
-class EnteringCell: CalculatorCell {
+class EnteringCell: UICollectionViewCell, ICalculatorCell {
     
     // MARK: -
     
     private lazy var dimensions: IDimensions = Dimensions()
-    private lazy var container: CalculatorContainerView = {
+    private lazy var container: EnteringContainerView = {
         let view = EnteringContainerView(frame: dimensions.frameInner)
         contentView.addSubview(view)
         
@@ -39,17 +39,11 @@ class EnteringCell: CalculatorCell {
     
     // MARK: - IConfigurable
     
-    override func configure(_ calculation: Calculation) {
+    func configure(_ calculation: Calculation) {
         container.configure(calculation)
     }
     
-    override func configure(_ calculatorState: CalculatorState) {
+    func configure(_ calculatorState: CalculatorState) {
         container.configure(calculatorState)
     }
-    
-    // MARK: - IAnimatable
-    
-    override func addAnimations() {}
-    override func setAnimations(timeOffset: CFTimeInterval) {}
-    override func removeAnimations() {}
 }

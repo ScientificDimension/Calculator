@@ -12,3 +12,8 @@ protocol IConfigurable {
     func configure(_ calculation: Calculation)
     func configure(_ calculatorState: CalculatorState)
 }
+
+extension IConfigurable {
+    func configure(_ calculation: Calculation) {}
+    func configure(_ calculatorState: CalculatorState) {}
+}

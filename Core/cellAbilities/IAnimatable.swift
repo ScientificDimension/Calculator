@@ -14,3 +14,8 @@ protocol IAnimatable {
     func removeAnimations()
 }
 
+extension IAnimatable {
+    func addAnimations() {}
+    func setAnimations(timeOffset: CFTimeInterval) {}
+    func removeAnimations() {}
+}
